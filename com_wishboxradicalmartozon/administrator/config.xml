@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset name="ozon" label="COM_WISHBOXRADICALMARTOZON_FIELDSET_OZON_LABEL">
+		<field
+			name="product_price_ratio"
+			type="number"
+			label="COM_WISHBOXRADICALMARTOZON_FIELD_PRODUCT_PRICE_RATIO_LABEL"
+			default="1"
+			min="0"
+			step="0.01"
+			filter="float"
+		/>
+	</fieldset>
+	<fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL">
+		<field
+			name="rules"
+			type="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			filter="rules"
+			component="com_wishboxradicalmartozon"
+			section="component"
+		/>
+	</fieldset>
+</config>

@@ -1,0 +1,20 @@
+{
+    "name": "wishbox/pkg-radicalmart-wishboxozon",
+    "description": "Joomla integration between RadicalMart and Ozon",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "php": ">=8.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^12.5"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit --configuration phpunit.xml.dist"
+    }
+}

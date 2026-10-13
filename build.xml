@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="pkg_radicalmart_wishboxozon" default="make" basedir=".">
+    <property name="library.archive" value="lib_wishboxradicalmartozon.zip"/>
+    <property name="component.archive" value="com_wishboxradicalmartozon.zip"/>
+    <property name="plugin.archive" value="plg_radicalmart_wishboxozon.zip"/>
+    <property name="task.plugin.archive" value="plg_task_wishboxradicalmartozon.zip"/>
+    <property name="package.archive" value="pkg_radicalmart_wishboxozon.zip"/>
+
+    <target name="make" description="Build the RadicalMart Wishbox Ozon package.">
+        <delete quiet="yes">
+            <fileset dir=".">
+                <include name="${library.archive}"/>
+                <include name="${component.archive}"/>
+                <include name="${plugin.archive}"/>
+                <include name="${task.plugin.archive}"/>
+                <include name="${package.archive}"/>
+            </fileset>
+        </delete>
+
+        <zip destfile="${library.archive}">
+            <fileset dir="./lib_wishboxradicalmartozon">
+                <include name="language/**"/>
+                <include name="src/**"/>
+                <include name="lib_wishboxradicalmartozon.xml"/>
+            </fileset>
+        </zip>
+
+		<zip destfile="${task.plugin.archive}">
+			<fileset dir="./plg_task_wishboxradicalmartozon">
+				<include name="language/**"/>
+				<include name="services/**"/>
+				<include name="src/**"/>
+				<include name="script.php"/>
+				<include name="wishboxradicalmartozon.xml"/>
+			</fileset>
+		</zip>
+
+        <zip destfile="${component.archive}">
+            <fileset dir="./com_wishboxradicalmartozon">
+                <include name="administrator/**"/>
+                <include name="wishboxradicalmartozon.xml"/>
+            </fileset>
+        </zip>
+
+        <zip destfile="${plugin.archive}">
+            <fileset dir="./plg_radicalmart_wishboxozon">
+                <include name="language/**"/>
+                <include name="layouts/**"/>
+                <include name="media/**"/>
+                <include name="services/**"/>
+                <include name="src/**"/>
+                <include name="script.php"/>
+                <include name="wishboxozon.xml"/>
+            </fileset>
+        </zip>
+
+        <zip destfile="${package.archive}">
+            <fileset dir=".">
+                <include name="${library.archive}"/>
+                <include name="${component.archive}"/>
+                <include name="${plugin.archive}"/>
+                <include name="${task.plugin.archive}"/>
+                <include name="language/**"/>
+                <include name="script.php"/>
+                <include name="pkg_radicalmart_wishboxozon.xml"/>
+            </fileset>
+        </zip>
+
+        <delete file="${library.archive}" quiet="yes"/>
+        <delete file="${component.archive}" quiet="yes"/>
+        <delete file="${plugin.archive}" quiet="yes"/>
+		<delete file="${task.plugin.archive}" quiet="yes"/>
+    </target>
+</project>

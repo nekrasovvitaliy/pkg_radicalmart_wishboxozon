@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="library" method="upgrade">
+	<name>lib_wishboxradicalmartozon</name>
+	<libraryname>wishboxradicalmartozon</libraryname>
+	<creationDate>October 2026</creationDate>
+	<author>Nekrasov Vitaliy</author>
+	<authorEmail>nekrasov_vitaliy@list.ru</authorEmail>
+	<version>1.0.0</version>
+	<description>LIB_WISHBOXRADICALMARTOZON_XML_DESCRIPTION</description>
+	<namespace path="src">WishboxRadicalMartOzonLibrary</namespace>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/lib_wishboxradicalmartozon.sys.ini</language>
+		<language tag="ru-RU">ru-RU/lib_wishboxradicalmartozon.sys.ini</language>
+	</languages>
+	<files>
+		<folder>src</folder>
+	</files>
+</extension>
